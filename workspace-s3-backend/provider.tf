@@ -13,13 +13,13 @@ provider "aws" {
 }
 
 terraform {
-  #Dynamodb lock
+  #s3 lockfile
     backend "s3" {
         bucket = "s3-backend-090926"
         region = "ap-south-1"
         shared_credentials_files = ["/root/.aws/credentials"]
         profile = "dev"
         key = "terraform.tfstate"
-        dynamodb_table = "terraform-locks"
+        use_lockfile = true
     }
 }
