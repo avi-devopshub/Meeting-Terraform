@@ -19,6 +19,6 @@ terraform {
         shared_credentials_files = ["/root/.aws/credentials"]
         profile = "dev"
         key = "terraform.tfstate"
-        use_lockfile = true
+        dynamodb_table = "terraform-locks"
     }
 }
