@@ -3,6 +3,6 @@ resource "aws_instance" "ec2"{
     instance_type = "t3.micro"
     key_name = "mumbai"
     tags = {
-        Name "server-${terraform.workspace}"
+        Name = "server-${terraform.workspace}"
     }
 }
