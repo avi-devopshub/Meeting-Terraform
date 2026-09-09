@@ -13,6 +13,7 @@ provider "aws" {
 }
 
 terraform {
+  #Dynamodb lock
     backend "s3" {
         bucket = "s3-backend-090926"
         region = "ap-south-1"
