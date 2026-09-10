@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 terraform{
-    backend "s3-remote" {
+    backend "s3" {
         bucket = "remote-backend-s3-10092026"
         region = "ap-south-1"
         profile = "dev"
